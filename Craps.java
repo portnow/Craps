@@ -36,9 +36,11 @@ public class Craps
         {
           System.out.println("Press <Enter> to roll the dice...");
           String roll = in.nextLine();
-          Die d = new Die();
-          d.rollDie();
-          System.out.println("Your first roll is: " + d.getRoll());
+          Die d1 = new Die();
+          Die d2 = new Die();
+          d1.rollDie();
+          d2.rollDie();
+          System.out.println("Your first roll is: " + (d1.getRoll() + d1.getRoll()));
         }
 
     }
