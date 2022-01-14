@@ -32,8 +32,14 @@ public class Craps
         System.out.println();
         System.out.println("Good luck!");
         System.out.println();
-        
-        
-      
+        while(playing)
+        {
+          System.out.println("Press <Enter> to roll the dice...");
+          String roll = in.nextLine();
+          Die d = new Die();
+          d.rollDie();
+          System.out.println("Your first roll is: " + d.getRoll());
+        }
+
     }
 }
