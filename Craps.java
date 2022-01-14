@@ -46,18 +46,32 @@ public class Craps
             System.out.println("Your first roll is: " + (point));
             if (point == 7 || point == 11)
             {
-                System.out.println("You win!");
+                System.out.println("You WIN! You are glorious!");
                 System.out.println("Would you like to play again(Y/n)?");
                 response = in.nextLine();
                 if(response.equals("") || response.substring(0,1).equalsIgnoreCase("y"))
                 {
-                  playing = true;
+                    playing = true;
                 }
                 else 
                 {
-                   playing = false; 
+                    playing = false; 
                 }
             }
-        }
+            else if (point == 2 || point == 3 || point == 12)
+            {
+                System.out.println("You LOSE! Haha sucker.");
+                System.out.println("Would you like to play again(Y/n)?");
+                response = in.nextLine();
+                if(response.equals("") || response.substring(0,1).equalsIgnoreCase("y"))
+                {
+                    playing = true;
+                }
+                else 
+                {
+                    playing = false; 
+                }  
+            }
         }
     }
+}
