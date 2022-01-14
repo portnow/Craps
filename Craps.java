@@ -42,8 +42,22 @@ public class Craps
             Die d2 = new Die();
             d1.rollDie();
             d2.rollDie();
-            System.out.println("Your first roll is: " + (d1.getRoll() + d1.getRoll()));
+            int point = d1.getRoll() + d2.getRoll();
+            System.out.println("Your first roll is: " + (point));
+            if (point == 7 || point == 11)
+            {
+                System.out.println("You win!");
+                System.out.println("Would you like to play again(Y/n)?");
+                response = in.nextLine();
+                if(response.equals("") || response.substring(0,1).equalsIgnoreCase("y"))
+                {
+                  playing = true;
+                }
+                else 
+                {
+                   playing = false; 
+                }
+            }
         }
-
+        }
     }
-}
