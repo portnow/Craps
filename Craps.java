@@ -79,11 +79,13 @@ public class Craps
                 int rollSum = 0;
                 while(rollSum != 7 && rollSum != point)
                 {
+                    System.out.println();
                     System.out.println("Press <Enter> to roll the dice...");
                     roll = in.nextLine(); 
                     d1.rollDie();
                     d2.rollDie();
                     rollSum = d1.getRoll() + d2.getRoll();
+                    System.out.println("Your roll is: " + rollSum);
                     if (rollSum == point)
                     {
                         System.out.println("You WIN! You are glorious!");
