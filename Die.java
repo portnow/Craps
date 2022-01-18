@@ -20,7 +20,7 @@ public class Die
     }
 
     /**
-     * Rolls a die.
+     * The rollDie method rolls a die.
      * @return    the value of the roll
      */
     public int rollDie()
@@ -30,7 +30,7 @@ public class Die
     }
     
     /**
-     * Views the die value.
+     * The getRoll() method views the die value.
      * @return    the value of the roll
      */
     public int getRoll()

@@ -25,7 +25,7 @@ public class Craps
         Scanner in = new Scanner(System.in);
         boolean playing = true;
         System.out.println("LET'S PLAY CRAPS!");
-        System.out.println("Do you need instructions (Y/n)?");
+        System.out.println("Do you need instructions (Y/n)?"); 
         String response = in.nextLine();
         if(response.equals("") || response.substring(0,1).equalsIgnoreCase("y"))
         {
@@ -34,7 +34,7 @@ public class Craps
         System.out.println();
         System.out.println("Good luck!");
         System.out.println();
-        while(playing)
+        while(playing) //keep playing the game while "playing" boolean is set to true
         {
             System.out.println("Press <Enter> to roll the dice...");
             String roll = in.nextLine();
@@ -44,7 +44,7 @@ public class Craps
             d2.rollDie();
             int point = d1.getRoll() + d2.getRoll();
             System.out.println("Your first roll is: " + (point));
-            if (point == 7 || point == 11)
+            if (point == 7 || point == 11) //winning first roll
             {
                 System.out.println("You WIN! You are glorious!");
                 System.out.println("Would you like to play again(Y/n)?");
@@ -58,7 +58,7 @@ public class Craps
                     playing = false; 
                 }
             }
-            else if (point == 2 || point == 3 || point == 12)
+            else if (point == 2 || point == 3 || point == 12) //losing first roll
             {
                 System.out.println("You LOSE! Haha sucker.");
                 System.out.println("Would you like to play again(Y/n)?");
@@ -72,12 +72,12 @@ public class Craps
                     playing = false; 
                 }  
             }
-            else
+            else //neutral first roll
             {
                 System.out.println("That's your point.");
                 System.out.println("Let's see if you can roll a " + point + " again before you roll a 7!");
                 int rollSum = 0;
-                while(rollSum != 7 && rollSum != point)
+                while(rollSum != 7 && rollSum != point) //repeate until either win or lose
                 {
                     System.out.println();
                     System.out.println("Press <Enter> to roll the dice...");
@@ -86,38 +86,38 @@ public class Craps
                     d2.rollDie();
                     rollSum = d1.getRoll() + d2.getRoll();
                     System.out.println("Your roll is: " + rollSum);
-                    if (rollSum == point)
+                    if (rollSum == point) //winning roll
                     {
                         System.out.println("You WIN! You are glorious!");
                         System.out.println("Would you like to play again(Y/n)?");
                         response = in.nextLine();
-                        if(response.equals("") || response.substring(0,1).equalsIgnoreCase("y"))
+                        if(response.equals("") || response.substring(0,1).equalsIgnoreCase("y")) 
                         {
-                            playing = true;
+                            playing = true; //restarts new game
                             break;
                         }
                         else 
                         {
-                            playing = false; 
+                            playing = false; //stop playing game
                             break;
                         }
                     }
-                    else if (rollSum == 7)
+                    else if (rollSum == 7) //losing roll
                     {
                         System.out.println("You LOSE! Haha sucker.");
-                        System.out.println("Would you like to play again(Y/n)?");
+                        System.out.println("Would you like to play again(Y/n)?"); 
                         response = in.nextLine();
-                        if(response.equals("") || response.substring(0,1).equalsIgnoreCase("y"))
+                        if(response.equals("") || response.substring(0,1).equalsIgnoreCase("y")) 
                         {
-                            playing = true;
+                            playing = true; //restarts new game
                             break;
                         }
                         else 
                         {
-                            playing = false; 
+                            playing = false; //stop playing game
                             break;
                         } 
-                        
+
                     }
 
                 }
