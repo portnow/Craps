@@ -72,6 +72,55 @@ public class Craps
                     playing = false; 
                 }  
             }
+            else
+            {
+                System.out.println("That's your point.");
+                System.out.println("Let's see if you can roll a " + point + " again before you roll a 7!");
+                int rollSum = 0;
+                while(rollSum != 7 && rollSum != point)
+                {
+                    System.out.println("Press <Enter> to roll the dice...");
+                    roll = in.nextLine(); 
+                    d1.rollDie();
+                    d2.rollDie();
+                    rollSum = d1.getRoll() + d2.getRoll();
+                    if (rollSum == point)
+                    {
+                        System.out.println("You WIN! You are glorious!");
+                        System.out.println("Would you like to play again(Y/n)?");
+                        response = in.nextLine();
+                        if(response.equals("") || response.substring(0,1).equalsIgnoreCase("y"))
+                        {
+                            playing = true;
+                            break;
+                        }
+                        else 
+                        {
+                            playing = false; 
+                            break;
+                        }
+                    }
+                    else if (rollSum == 7)
+                    {
+                        System.out.println("You LOSE! Haha sucker.");
+                        System.out.println("Would you like to play again(Y/n)?");
+                        response = in.nextLine();
+                        if(response.equals("") || response.substring(0,1).equalsIgnoreCase("y"))
+                        {
+                            playing = true;
+                            break;
+                        }
+                        else 
+                        {
+                            playing = false; 
+                            break;
+                        } 
+                        
+                    }
+
+                }
+
+            }
         }
     }
 }
