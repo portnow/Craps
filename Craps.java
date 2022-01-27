@@ -126,3 +126,26 @@ public class Craps
         }
     }
 }
+
+/*
+
+COMMENTS FROM THE INSTRUCTOR:
+
+"Haha sucker?!" Your program mocks me??! ;)
+
+Such a great experience, playing this program. Nice flow, and you did a great job of
+implementing the default "Yes/No" feature.
+
+One suggestion for you. If you have "line numbering" turned on in your BlueJ preferences,
+take a look at lines 50-59, and 64-73, and 92-103... These are all variations on the 
+"Would you like to play again" question, Without much difficulty you can restructure
+this program so that you only need to have one section of code near the end that
+handles that common feature.
+
+Otherwise, just outstanding. Thank you, Dhalia, and I look forward to seeing more
+strong work in our upcoming projects!
+
+SCORE: 49/50
+
+*/
+
